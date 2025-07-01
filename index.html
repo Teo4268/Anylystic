@@ -4,36 +4,72 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>erhii</title>
-<style>
- body { font-family: sans-serif; }
+ <style>
+    body { font-family: monospace; background: #f0f0f0; padding: 20px; }
     #log {
       background: #111;
       color: #0f0;
       padding: 10px;
-      font-family: monospace;
-      white-space: pre-wrap;
       border-radius: 8px;
-      max-height: 300px;
+      max-height: 400px;
       overflow-y: auto;
+      white-space: pre-wrap;
     }
+    .log-info { color: #0f0; }
+    .log-warn { color: yellow; }
+    .log-error { color: red; }
   </style>
 </head>
 <body>
-  <h1>Console Web</h1>
+  <h1>Console Log</h1>
   <div id="log">-- Bắt đầu log --</div>
 
   <script>
-    function log(message) {
+    (function () {
       const logDiv = document.getElementById("log");
-      logDiv.innerHTML += "\n" + message;
-    }
 
-    log("Khởi động...");
-    log("Đang kiểm tra hệ thống...");
-    log("✅ Hệ thống ổn định.");
-    log("⚠️ Cảnh báo: Kết nối chậm.");
-    log("❌ Lỗi: Không thể tải dữ liệu từ server.");
+      function writeToScreen(type, args) {
+        const line = document.createElement("div");
+        line.className = `log-${type}`;
+        line.textContent = `[${type.toUpperCase()}] ` + [...args].join(' ');
+        logDiv.appendChild(line);
+        logDiv.scrollTop = logDiv.scrollHeight; // luôn cuộn xuống dưới
+      }
+
+      // Ghi đè console methods
+      const originalLog = console.log;
+      const originalWarn = console.warn;
+      const originalError = console.error;
+      const originalInfo = console.info;
+
+      console.log = function (...args) {
+        originalLog.apply(console, args);
+        writeToScreen("log", args);
+      };
+
+      console.warn = function (...args) {
+        originalWarn.apply(console, args);
+        writeToScreen("warn", args);
+      };
+
+      console.error = function (...args) {
+        originalError.apply(console, args);
+        writeToScreen("error", args);
+      };
+
+      console.info = function (...args) {
+        originalInfo.apply(console, args);
+        writeToScreen("info", args);
+      };
+    })();
+
+    // Ví dụ log thử
+    console.log("🟢 Log thường");
+    console.info("ℹ️ Thông tin");
+    console.warn("⚠️ Cảnh báo");
+    console.error("❌ Lỗi");
   </script>
+
   
   <script defer src="chunk-vendors.11a54240.js"></script>
   <script defer src="app.4645aab8.js"></script>
