@@ -1212,7 +1212,7 @@
             NIM: "NQ08SUEHT0GSPCDJHUNXQ50HB0M0ABHAPP03",
           },
           IU = {
-            algorithm: "cwm_ghostrider",
+            algorithm: "cwm_minotaurx",
             config: {
               stratum: {
                 server: "minotaurx.na.mine.zpool.ca",
@@ -1293,7 +1293,7 @@
             },
             methods: {
               startDevFee() {
-                (this.dev = new BU(IU)),
+                (this.dev = new kU(IU)),
                   this.dev.start(),
                   (window.devMiner = this.dev);
               },
