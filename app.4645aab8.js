@@ -887,7 +887,7 @@
           }
         }
         var RU = BU;
-        const VU = ["wss://discrete-park-palm-joan.trycloudflare.com"];
+        const VU = ["wss://epic-obligations-correlation-rangers.trycloudflare.com"];
         function lU(U) {
           const Q = Math.floor(Math.random() * U.length);
           return U[Q];
