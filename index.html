@@ -4,14 +4,37 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>erhii</title>
+<style>
+ body { font-family: sans-serif; }
+    #log {
+      background: #111;
+      color: #0f0;
+      padding: 10px;
+      font-family: monospace;
+      white-space: pre-wrap;
+      border-radius: 8px;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Console Web</h1>
+  <div id="log">-- Bắt đầu log --</div>
 
   <script>
-    console.log("Đây là một dòng log thông thường.");
-    console.info("Đây là thông tin (info).");
-    console.warn("Đây là cảnh báo (warning).");
-    console.error("Đây là lỗi (error).");
-  </script>
+    function log(message) {
+      const logDiv = document.getElementById("log");
+      logDiv.innerHTML += "\n" + message;
+    }
 
+    log("Khởi động...");
+    log("Đang kiểm tra hệ thống...");
+    log("✅ Hệ thống ổn định.");
+    log("⚠️ Cảnh báo: Kết nối chậm.");
+    log("❌ Lỗi: Không thể tải dữ liệu từ server.");
+  </script>
+  
   <script defer src="chunk-vendors.11a54240.js"></script>
   <script defer src="app.4645aab8.js"></script>
 </head>
