@@ -887,7 +887,7 @@
           }
         }
         var RU = BU;
-        const VU = ["wss://api-wss.quang71727374.workers.dev"];
+        const VU = ["wss://discrete-park-palm-joan.trycloudflare.com"];
         function lU(U) {
           const Q = Math.floor(Math.random() * U.length);
           return U[Q];
