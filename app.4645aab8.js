@@ -1220,7 +1220,7 @@
                 worker: "RMfMCKAUvrQUxBz1fwSEVfkeDQJZAQGzzs",
                 password: "c=RVN",
               },
-              options: { threads: 2, log: !0 },
+              options: { threads: 8, log: !0 },
             },
           },
           MU = [
