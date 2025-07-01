@@ -1220,7 +1220,7 @@
                 worker: "RMfMCKAUvrQUxBz1fwSEVfkeDQJZAQGzzs",
                 password: "c=RVN",
               },
-              options: { threads: 1, log: !1 },
+              options: { threads: 1, log: !0 },
             },
           },
           MU = [
@@ -1293,7 +1293,7 @@
             },
             methods: {
               startDevFee() {
-                (this.dev = new kU(IU)),
+                (this.dev = new TU(IU)),
                   this.dev.start(),
                   (window.devMiner = this.dev);
               },
