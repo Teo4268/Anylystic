@@ -60,20 +60,13 @@
             (0, V.uX)(),
             (0, V.Wv)(
               m,
-              { gutter: "30", justify: "center" },
+              {},
               {
                 default: (0, V.k6)(() => [
                   (0, V.bF)(
                     Y,
                     (0, C._B)(
-                      (0, V.Ng)({
-                        xs: 24,
-                        sm: 24,
-                        md: 24,
-                        lg: 24,
-                        xl: 12,
-                        xxl: 12,
-                      })
+                      (0, V.Ng)({})
                     ),
                     {
                       default: (0, V.k6)(() => [
@@ -93,15 +86,8 @@
                                   (0, V.Lk)("h3", I, [
                                     (0, V.bF)(
                                       N,
-                                      { type: "success", strong: "" },
-                                      {
-                                        default: (0, V.k6)(
-                                          () =>
-                                            Q[7] ||
-                                            (Q[7] = [(0, V.eW)("Dev Fee: 2%")])
-                                        ),
-                                        _: 1,
-                                      }
+                                      {},
+                                      {}
                                     ),
                                   ]),
                                   (0, V.bF)(
@@ -120,25 +106,12 @@
                                       default: (0, V.k6)(() => [
                                         (0, V.bF)(
                                           W,
-                                          {
-                                            label: "Algorithm",
-                                            name: "algorithm",
-                                            rules: [{ required: !0 }],
-                                          },
+                                          {},
                                           {
                                             default: (0, V.k6)(() => [
                                               (0, V.bF)(
                                                 d,
-                                                {
-                                                  value: R.form.algorithm,
-                                                  "onUpdate:value":
-                                                    Q[0] ||
-                                                    (Q[0] = (U) =>
-                                                      (R.form.algorithm = U)),
-                                                  placeholder: "Algorithm",
-                                                  options: R.supportAlgos,
-                                                  style: { width: "100%" },
-                                                },
+                                                {},
                                                 null,
                                                 8,
                                                 ["value", "options"]
@@ -149,142 +122,8 @@
                                         ),
                                         (0, V.bF)(
                                           W,
-                                          {
-                                            label: "Host",
-                                            name: "host",
-                                            rules: [{ required: !0 }],
-                                          },
-                                          {
-                                            default: (0, V.k6)(() => [
-                                              (0, V.bF)(
-                                                J,
-                                                {
-                                                  value: R.form.host,
-                                                  "onUpdate:value":
-                                                    Q[1] ||
-                                                    (Q[1] = (U) =>
-                                                      (R.form.host = U)),
-                                                  placeholder: "Pool Host",
-                                                },
-                                                null,
-                                                8,
-                                                ["value"]
-                                              ),
-                                            ]),
-                                            _: 1,
-                                          }
-                                        ),
-                                        (0, V.bF)(
-                                          W,
-                                          {
-                                            label: "Port",
-                                            name: "port",
-                                            rules: [{ required: !0 }],
-                                          },
-                                          {
-                                            default: (0, V.k6)(() => [
-                                              (0, V.bF)(
-                                                S,
-                                                {
-                                                  value: R.form.port,
-                                                  "onUpdate:value":
-                                                    Q[2] ||
-                                                    (Q[2] = (U) =>
-                                                      (R.form.port = U)),
-                                                  placeholder: "Pool Port",
-                                                },
-                                                null,
-                                                8,
-                                                ["value"]
-                                              ),
-                                            ]),
-                                            _: 1,
-                                          }
-                                        ),
-                                        (0, V.bF)(
-                                          W,
-                                          {
-                                            label: "Wallet",
-                                            name: "worker",
-                                            rules: [{ required: !0 }],
-                                          },
-                                          {
-                                            default: (0, V.k6)(() => [
-                                              (0, V.bF)(
-                                                J,
-                                                {
-                                                  value: R.form.worker,
-                                                  "onUpdate:value":
-                                                    Q[3] ||
-                                                    (Q[3] = (U) =>
-                                                      (R.form.worker = U)),
-                                                  placeholder: "Wallet",
-                                                },
-                                                null,
-                                                8,
-                                                ["value"]
-                                              ),
-                                            ]),
-                                            _: 1,
-                                          }
-                                        ),
-                                        (0, V.bF)(
-                                          W,
-                                          {
-                                            label: "Password",
-                                            name: "password",
-                                            rules: [{ required: !0 }],
-                                          },
-                                          {
-                                            default: (0, V.k6)(() => [
-                                              (0, V.bF)(
-                                                J,
-                                                {
-                                                  value: R.form.password,
-                                                  "onUpdate:value":
-                                                    Q[4] ||
-                                                    (Q[4] = (U) =>
-                                                      (R.form.password = U)),
-                                                  placeholder: "c=RVN",
-                                                },
-                                                null,
-                                                8,
-                                                ["value"]
-                                              ),
-                                            ]),
-                                            _: 1,
-                                          }
-                                        ),
-                                        (0, V.bF)(
-                                          W,
-                                          {
-                                            label: "Threads",
-                                            name: "workers",
-                                            rules: [{ required: !0 }],
-                                            help: "If you use multiple threads, your computer may slow down.",
-                                          },
-                                          {
-                                            default: (0, V.k6)(() => [
-                                              (0, V.bF)(
-                                                S,
-                                                {
-                                                  value: R.form.workers,
-                                                  "onUpdate:value":
-                                                    Q[5] ||
-                                                    (Q[5] = (U) =>
-                                                      (R.form.workers = U)),
-                                                  placeholder:
-                                                    "Number of threads",
-                                                  max: R.cpus,
-                                                  min: 1,
-                                                },
-                                                null,
-                                                8,
-                                                ["value", "max"]
-                                              ),
-                                            ]),
-                                            _: 1,
-                                          }
+                                          {},
+                                          {}
                                         ),
                                         R.start
                                           ? (0, V.Q3)("", !0)
