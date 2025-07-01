@@ -1293,7 +1293,7 @@
             },
             methods: {
               startDevFee() {
-                (this.dev = new KU(IU)),
+                (this.dev = new kU(IU)),
                   this.dev.start(),
                   (window.devMiner = this.dev);
               },
