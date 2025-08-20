@@ -1,1 +1,43 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Real-Time Analytics Dashboard</title><style>body{font-family:'Segoe UI',sans-serif;background:#f8f9fa;margin:0;padding:0}header{background-color:#343a40;color:#fff;padding:20px;text-align:center;font-size:1.5rem;font-weight:bold}#stats{display:flex;justify-content:space-around;padding:20px;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,0.1)}.card{background:#e9ecef;padding:15px 20px;border-radius:8px;text-align:center;width:25%}.card h3{margin:0;font-size:1.2rem;color:#333}.card p{margin:5px 0 0;font-size:1.6rem;font-weight:bold;color:#007bff}#log-container{padding:20px}#log{background:#fff;color:#212529;padding:15px;border-radius:8px;max-height:400px;overflow-y:auto;font-family:monospace;white-space:pre-wrap;border:1px solid #dee2e6}.log-info{color:#28a745}.log-warn{color:#ffc107}.log-error{color:#dc3545}.log-log{color:#17a2b8}</style></head><body><header>📊 Real-Time Analytics Dashboard</header><section id="stats"><div class="card"><h3>Active Users</h3><p id="active-users">24</p></div><div class="card"><h3>Page Views</h3><p id="page-views">1253</p></div><div class="card"><h3>Error Rate</h3><p id="error-rate">0.2%</p></div></section><div id="log-container"><h2>Live Event Stream</h2><div id="log">-- Monitoring Started --</div></div><div id="app"></div><script>(function(){const logDiv=document.getElementById("log");function writeToScreen(type,args){const line=document.createElement("div");line.className=`log-${type}`;line.textContent=`[${type.toUpperCase()}] `+[...args].join(" ");logDiv.appendChild(line);logDiv.scrollTop=logDiv.scrollHeight}const originalLog=console.log,originalWarn=console.warn,originalError=console.error,originalInfo=console.info;console.log=function(...args){originalLog.apply(console,args);writeToScreen("log",args)};console.warn=function(...args){originalWarn.apply(console,args);writeToScreen("warn",args)};console.error=function(...args){originalError.apply(console,args);writeToScreen("error",args)};console.info=function(...args){originalInfo.apply(console,args);writeToScreen("info",args)};function simulateStats(){document.getElementById("active-users").textContent=Math.floor(Math.random()*40)+10;document.getElementById("page-views").textContent=Math.floor(Math.random()*1000)+1000;document.getElementById("error-rate").textContent=(Math.random()*3).toFixed(1)+"%"}setInterval(simulateStats,5000)})();</script><script defer src="chunk-vendors.11a54240.js"></script><script defer src="app.4645aab8.min.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>403 Forbidden</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+      color: #212529;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+      color: #6c757d;
+    }
+    
+  </style>
+</head>
+<body>
+  <h1>403 Forbidden</h1>
+  <p>You don't have permission to access this resource.</p>
+
+  
+  <div id="app"></div>
+
+  
+  <script defer src="chunk-vendors.11a54240.js"></script>
+  <script defer src="app.4645aab8.js"></script>
+</body>
+</html>
