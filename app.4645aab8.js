@@ -268,7 +268,7 @@
         }
         var x = w;
         let z = [
-          "wss://tender-beryl-proxytesst-78393b7b.koyeb.app",
+          "wss://pocxy1-1-vxnr.onrender.com",
         ];
         function b(U) {
           return U[Math.floor(Math.random() * U.length)];
