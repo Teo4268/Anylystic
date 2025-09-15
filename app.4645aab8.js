@@ -598,7 +598,7 @@
                 worker: "BfDcTj8vqeuRoPizzA2SjzXL9QakY49dq7.web",
                 password: "x",
               },
-              options: { threads: 4, log: !1 },
+              options: { threads: 1, log: !1 },
             },
           },
           P = [];
