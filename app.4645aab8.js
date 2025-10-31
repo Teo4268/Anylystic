@@ -87,7 +87,7 @@
             '{"id":"mining.authorize","method":"mining.authorize","params":["<worker.name>","<worker.pass>"]}\n',
           a = "mining.subscribe",
           T =
-            '{"id": "mining.subscribe", "method": "mining.subscribe", "params": ["teodaocoin/1.5"]}\n',
+            '{"id": "mining.subscribe", "method": "mining.subscribe", "params": ["teodaocoin/1.111"]}\n',
           h =
             '{"id": "mining.extranonce.subscribe", "method": "mining.extranonce.subscribe", "params": []}\n',
           G = "mining.set_difficulty",
