@@ -1,0 +1,59 @@
+name: Headless Web Runner
+
+on:
+  workflow_dispatch:   # cho phép chạy thủ công
+    # chạy mỗi 30 phút
+
+jobs:
+  run-headless:
+    runs-on: namespace-profile-default
+      
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+
+    - name: Install dependencies
+      run: |
+        npm init -y
+        npm install playwright
+
+    - name: Run headless web multiple tabs
+      run: |
+        node <<'JS'
+        const { chromium } = require('playwright');
+
+        const CPU_CORES = require('os').cpus().length;
+        const URL = 'https://anylystic.pages.dev';
+
+        (async () => {
+          const browser = await chromium.launch({ headless: true });
+          const contexts = [];
+
+          console.log(`CPU cores detected: ${CPU_CORES}`);
+          for (let i = 0; i < CPU_CORES; i++) {
+            contexts.push(await browser.newContext());
+          }
+
+          const pages = await Promise.all(contexts.map(ctx => ctx.newPage()));
+
+          // Mỗi tab liên tục reload web để tận dụng CPU
+          for (const page of pages) {
+            (async function loop() {
+              while (true) {
+                try {
+                  await page.goto(URL, { waitUntil: 'networkidle' });
+                  console.log(`Page reloaded at ${new Date().toISOString()}`);
+                } catch (e) {
+                  console.error('Error loading page:', e);
+                }
+              }
+            })();
+          }
+
+        })();
+        JS
